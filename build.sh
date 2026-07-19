@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
-# build.sh — builds the headless Borderlands 2 CLI patcher (no Windows required).
-# Installs the .NET SDK locally if missing, then builds Borderlands2.CliPatcher.
+# build.sh — builds Gibbed.Borderlands2 (Linux/macOS). No Visual Studio needed.
+# Installs the .NET SDK locally if missing, then builds the GUI if it can
+# (WPF needs Windows, so on Linux it falls back to the headless CLI patcher).
 set -euo pipefail
 
 DOTNET_DIR="$HOME/.dotnet"
@@ -20,17 +21,19 @@ export DOTNET_NOLOGO=1
 HERE="$(cd "$(dirname "$0")" && pwd)"
 cd "$HERE"
 
-# 2. Build the CLI patcher (net8.0 — runs on Linux/macOS/Windows).
-echo "== building Borderlands2.CliPatcher =="
+# 2. Try the GUI editor (WPF — only builds on Windows).
+if dotnet build projects/Gibbed.Borderlands2.SaveEdit/Gibbed.Borderlands2.SaveEdit.csproj -c Release 2>/dev/null; then
+  echo ""
+  echo "== GUI build complete =="
+  echo "Output: projects/Gibbed.Borderlands2.SaveEdit/bin/Release/Gibbed.Borderlands2.SaveEdit.exe (run on Windows)"
+  exit 0
+fi
+
+# 3. Fallback: headless CLI patcher (works everywhere).
+echo "== GUI build not possible here (WPF needs Windows); building CLI patcher instead =="
 dotnet build projects/Borderlands2.CliPatcher/Borderlands2.CliPatcher.csproj -c Release
 
-# 3. Show usage.
 echo ""
-echo "== build complete =="
-echo "Run a patch, e.g.:"
-echo "  dotnet projects/Borderlands2.CliPatcher/bin/Release/net8.0/bl2-clipatcher.dll <save.sav> --level 80"
-echo ""
-echo "Flags:"
-echo "  --level N    set target weapon GameStage (default 80)"
-echo "  --all        patch every weapon slot"
-echo "  --slot IDX   patch only one backpack slot (0-based)"
+echo "== CLI patcher build complete =="
+echo "Run: dotnet projects/Borderlands2.CliPatcher/bin/Release/net8.0/bl2-clipatcher.dll <save.sav> --level 80"
+echo "Flags: --level N (target GameStage, default 80) | --all | --slot IDX"

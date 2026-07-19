@@ -28,6 +28,8 @@
   <ItemGroup>
     <PackageReference Include="Caliburn.Micro" Version="1.5.1" />
     <PackageReference Include="Extended.Wpf.Toolkit" Version="2.7.0" />
+    <!-- Lets 'dotnet build' compile net40 without Visual Studio's targeting packs -->
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.3" PrivateAssets="all" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Caliburn.Micro.Contrib, Version=1.0.1.0, Culture=neutral, PublicKeyToken=23b8ce3a92a0a872, processorArchitecture=MSIL">
