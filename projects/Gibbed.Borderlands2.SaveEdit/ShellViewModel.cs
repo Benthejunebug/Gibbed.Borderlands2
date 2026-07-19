@@ -159,6 +159,8 @@ namespace Gibbed.Borderlands2.SaveEdit
         private bool _IsGeneralSelected;
         private bool _IsFirstAboutSelection;
         private bool _IsAboutSelected;
+
+        private bool _AutoBackup = true;
         #endregion
 
         #region Properties
@@ -241,6 +243,19 @@ namespace Gibbed.Borderlands2.SaveEdit
         public ICommand NewSaveFromPlayerClass
         {
             get { return this._NewSaveFromPlayerClass; }
+        }
+
+        public bool AutoBackup
+        {
+            get { return this._AutoBackup; }
+            set
+            {
+                if (this._AutoBackup != value)
+                {
+                    this._AutoBackup = value;
+                    this.NotifyOfPropertyChange(nameof(AutoBackup));
+                }
+            }
         }
         #endregion
 
@@ -541,6 +556,11 @@ namespace Gibbed.Borderlands2.SaveEdit
             var savePath = this.SavePath;
             var saveFile = this.SaveFile;
 
+            if (this.AutoBackup == true)
+            {
+                SaveLoad.BackupFile(savePath);
+            }
+
             yield return new DelegateResult(
                 () => WriteSave(savePath, saveFile))
                 .Rescue()
@@ -550,6 +570,16 @@ namespace Gibbed.Borderlands2.SaveEdit
                         $"An exception was thrown (press Ctrl+C to copy):\n\n{x.ToString()}",
                         "Error")
                         .WithIcon(MessageBoxImage.Error).AsCoroutine());
+        }
+
+        public void BackupNow()
+        {
+            if (string.IsNullOrEmpty(this.SavePath) == true)
+            {
+                return;
+            }
+
+            SaveLoad.BackupFile(this.SavePath);
         }
 
         public IEnumerable<IResult> WriteSaveAs()
@@ -572,6 +602,11 @@ namespace Gibbed.Borderlands2.SaveEdit
             }
 
             var saveFile = this.SaveFile;
+
+            if (this.AutoBackup == true)
+            {
+                SaveLoad.BackupFile(savePath);
+            }
 
             yield return new DelegateResult(
                 () =>

@@ -107,6 +107,23 @@
                 </StackPanel>
                 <Button.ToolTip>Save As (Ctrl+Shift+S)</Button.ToolTip>
             </Button>
+            <Separator />
+            <CheckBox IsChecked="{Binding Path=AutoBackup}"
+                      VerticalAlignment="Center"
+                      Margin="4,0"
+                      ToolTip="Keep a timestamped backup of the previous save before each save">
+                <Label Content="Auto-backup" />
+            </CheckBox>
+            <Button>
+                <c:Message.Attach>[Event Click] = [Action BackupNow]</c:Message.Attach>
+                <StackPanel Orientation="Horizontal">
+                    <Image Width="16"
+                           Height="16"
+                           Source="Resources\fugue\document-copy.png" />
+                    <Label Content="Backup Now" />
+                </StackPanel>
+                <Button.ToolTip>Create a timestamped backup of the current save now</Button.ToolTip>
+            </Button>
         </ToolBar>
         <TabControl TabStripPlacement="Top">
             <TabItem IsSelected="{Binding Path=IsGeneralSelected}">

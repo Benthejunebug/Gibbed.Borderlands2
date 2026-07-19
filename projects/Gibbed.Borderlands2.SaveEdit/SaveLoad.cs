@@ -142,5 +142,33 @@ namespace Gibbed.Borderlands2.SaveEdit
 
             fileNameAction(fileName);
         }
+
+        /// <summary>
+        /// Copies an existing save file to a timestamped Backups/ subfolder next to it.
+        /// Best-effort: any failure is swallowed so it can never block the real save.
+        /// </summary>
+        public static void BackupFile(string filePath)
+        {
+            if (string.IsNullOrEmpty(filePath) == true || File.Exists(filePath) == false)
+            {
+                return;
+            }
+
+            try
+            {
+                var directory = Path.GetDirectoryName(filePath);
+                var backupDirectory = Path.Combine(directory ?? string.Empty, "Backups");
+                Directory.CreateDirectory(backupDirectory);
+                var stamp = DateTime.Now.ToString("yyyyMMdd-HHmmss");
+                var name = Path.GetFileNameWithoutExtension(filePath);
+                var ext = Path.GetExtension(filePath);
+                var backupPath = Path.Combine(backupDirectory, $"{name}.{stamp}{ext}");
+                File.Copy(filePath, backupPath, false);
+            }
+            catch
+            {
+                // Ignore backup failures; the actual save must proceed.
+            }
+        }
     }
 }

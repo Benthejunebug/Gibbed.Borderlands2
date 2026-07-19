@@ -400,16 +400,22 @@ namespace Gibbed.Borderlands2.SaveEdit
                 {
                     if ((weapon.ManufacturerGradeIndex + weapon.GameStage) >= 2)
                     {
-                        weapon.ManufacturerGradeIndex = this.Character.SyncLevel;
-                        weapon.GameStage = this.Character.SyncLevel;
+                        // Never lower gear that is already above the character level
+                        // (e.g. a level 80 weapon on a level 1 character).
+                        var syncLevel = this.Character.SyncLevel;
+                        weapon.ManufacturerGradeIndex = Math.Max(weapon.ManufacturerGradeIndex, syncLevel);
+                        weapon.GameStage = Math.Max(weapon.GameStage, syncLevel);
                     }
                 }
                 else if (viewModel is BaseItemViewModel item)
                 {
                     if ((item.ManufacturerGradeIndex + item.GameStage) >= 2)
                     {
-                        item.ManufacturerGradeIndex = this.Character.SyncLevel;
-                        item.GameStage = this.Character.SyncLevel;
+                        // Never lower gear that is already above the character level
+                        // (e.g. a level 80 item on a level 1 character).
+                        var syncLevel = this.Character.SyncLevel;
+                        item.ManufacturerGradeIndex = Math.Max(item.ManufacturerGradeIndex, syncLevel);
+                        item.GameStage = Math.Max(item.GameStage, syncLevel);
                     }
                 }
                 else
