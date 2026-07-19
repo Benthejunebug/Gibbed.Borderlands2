@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <AssemblyName>bl2-makesave</AssemblyName>
+    <Nullable>disable</Nullable>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Gibbed.Borderlands2.FileFormats\Gibbed.Borderlands2.FileFormats.csproj" />
+    <ProjectReference Include="..\Gibbed.Borderlands2.GameInfo\Gibbed.Borderlands2.GameInfo.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="MiniLZO">
+      <HintPath>..\..\other\MiniLZO.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+</Project>
