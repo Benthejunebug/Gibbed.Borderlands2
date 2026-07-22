@@ -1,0 +1,209 @@
+#<BLCMM v="1">
+#<!!!You opened a file saved with BLCMM in FilterTool. Please update to BLCMM to properly open this file!!!>
+<head>
+    <type name="BL2" offline="false"/>
+    <profiles>
+        <profile name="default" current="true"/>
+    </profiles>
+</head>
+<body>
+    <category name="No Level Requirement For Gear (Focused)">
+        <comment>Mod based on research of existing community work (OurLordAndSaviorGabeNewell / Nexus Mods #94).</comment>
+        <comment></comment>
+        <comment>This is a FOCUSED version covering the most commonly-used item categories.</comment>
+        <comment>For complete coverage of every item in the game, use the full mod from Nexus.</comment>
+        <comment></comment>
+        <comment>What this does: sets bUsesPlayerLevelRequirement=False on item definitions</comment>
+        <comment>so the game runtime doesn't block equipping high-level gear on low-level chars.</comment>
+        <comment></comment>
+        <comment>To use with our save editor: first patch your save to GameStage=80, then</comment>
+        <comment>run this mod in-game so the level-80 weapon actually equips.</comment>
+        <comment></comment>
+
+        <category name="Artifacts">
+            <comment>Covers all relic/artifact types from the base game + DLCs.</comment>
+            <code profiles="default">set GD_Artifacts.A_Item.Artifact_AggressionA bUsesPlayerLevelRequirement False</code>
+            <code profiles="default">set GD_Artifacts.A_Item.Artifact_AggressionB bUsesPlayerLevelRequirement False</code>
+            <code profiles="default">set GD_Artifacts.A_Item.Artifact_AggressionC bUsesPlayerLevelRequirement False</code>
+            <code profiles="default">set GD_Artifacts.A_Item.Artifact_AggressionD bUsesPlayerLevelRequirement False</code>
+            <code profiles="default">set GD_Artifacts.A_Item.Artifact_AggressionE bUsesPlayerLevelRequirement False</code>
+            <code profiles="default">set GD_Artifacts.A_Item.Artifact_AggressionF bUsesPlayerLevelRequirement False</code>
+            <code profiles="default">set GD_Artifacts.A_Item.Artifact_AllegianceA bUsesPlayerLevelRequirement False</code>
+            <code profiles="default">set GD_Artifacts.A_Item.Artifact_AllegianceB bUsesPlayerLevelRequirement False</code>
+            <code profiles="default">set GD_Artifacts.A_Item.Artifact_AllegianceC bUsesPlayerLevelRequirement False</code>
+            <code profiles="default">set GD_Artifacts.A_Item.Artifact_AllegianceD bUsesPlayerLevelRequirement False</code>
+            <code profiles="default">set GD_Artifacts.A_Item.Artifact_AllegianceE bUsesPlayerLevelRequirement False</code>
+            <code profiles="default">set GD_Artifacts.A_Item.Artifact_AllegianceF bUsesPlayerLevelRequirement False</code>
+            <code profiles="default">set GD_Artifacts.A_Item.Artifact_AllegianceG bUsesPlayerLevelRequirement False</code>
+            <code profiles="default">set GD_Artifacts.A_Item.Artifact_AllegianceH bUsesPlayerLevelRequirement False</code>
+            <code profiles="default">set GD_Artifacts.A_Item.Artifact_Elemental bUsesPlayerLevelRequirement False</code>
+            <code profiles="default">set GD_Artifacts.A_Item.Artifact_Elemental_Status bUsesPlayerLevelRequirement False</code>
+            <code profiles="default">set GD_Artifacts.A_Item.Artifact_Proficiency bUsesPlayerLevelRequirement False</code>
+            <code profiles="default">set GD_Artifacts.A_Item.Artifact_Protection bUsesPlayerLevelRequirement False</code>
+            <code profiles="default">set GD_Artifacts.A_Item.Artifact_Resistance bUsesPlayerLevelRequirement False</code>
+            <code profiles="default">set GD_Artifacts.A_Item.Artifact_Stockpile bUsesPlayerLevelRequirement False</code>
+            <code profiles="default">set GD_Artifacts.A_Item.Artifact_Strength bUsesPlayerLevelRequirement False</code>
+            <code profiles="default">set GD_Artifacts.A_Item.Artifact_Tenacity bUsesPlayerLevelRequirement False</code>
+            <code profiles="default">set GD_Artifacts.A_Item.Artifact_Vitality bUsesPlayerLevelRequirement False</code>
+            <code profiles="default">set GD_Artifacts.A_Item_Unique.Artifact_Afterburner bUsesPlayerLevelRequirement False</code>
+            <code profiles="default">set GD_Artifacts.A_Item_Unique.Artifact_Deputy bUsesPlayerLevelRequirement False</code>
+            <code profiles="default">set GD_Artifacts.A_Item_Unique.Artifact_Endowment bUsesPlayerLevelRequirement False</code>
+            <code profiles="default">set GD_Artifacts.A_Item_Unique.Artifact_Opportunity bUsesPlayerLevelRequirement False</code>
+            <code profiles="default">set GD_Artifacts.A_Item_Unique.Artifact_Sheriff bUsesPlayerLevelRequirement False</code>
+            <code profiles="default">set GD_Artifacts.A_Item_Unique.Artifact_Terramorphous bUsesPlayerLevelRequirement False</code>
+            <code profiles="default">set GD_Artifacts.A_Item_Unique.Artifact_VaultHunter bUsesPlayerLevelRequirement False</code>
+            <code profiles="default">set GD_Aster_Artifacts.A_Item_Unique.Artifact_MysteryAmulet bUsesPlayerLevelRequirement False</code>
+            <code profiles="default">set GD_Aster_Artifacts.A_Item_Unique.Artifact_SeraphShadow bUsesPlayerLevelRequirement False</code>
+            <code profiles="default">set GD_Gladiolus_Artifacts.A_Item.Artifact_AggressionTenacityAssault bUsesPlayerLevelRequirement False</code>
+            <code profiles="default">set GD_Gladiolus_Artifacts.A_Item.Artifact_AggressionTenacityLauncher bUsesPlayerLevelRequirement False</code>
+            <code profiles="default">set GD_Gladiolus_Artifacts.A_Item.Artifact_AggressionTenacityPistol bUsesPlayerLevelRequirement False</code>
+            <code profiles="default">set GD_Gladiolus_Artifacts.A_Item.Artifact_AggressionTenacitySMG bUsesPlayerLevelRequirement False</code>
+            <code profiles="default">set GD_Gladiolus_Artifacts.A_Item.Artifact_AggressionTenacityShotgun bUsesPlayerLevelRequirement False</code>
+            <code profiles="default">set GD_Gladiolus_Artifacts.A_Item.Artifact_AggressionTenacitySniper bUsesPlayerLevelRequirement False</code>
+            <code profiles="default">set GD_Gladiolus_Artifacts.A_Item.Artifact_ElementalProficiency bUsesPlayerLevelRequirement False</code>
+            <code profiles="default">set GD_Gladiolus_Artifacts.A_Item.Artifact_ResistanceProtection bUsesPlayerLevelRequirement False</code>
+            <code profiles="default">set GD_Gladiolus_Artifacts.A_Item.Artifact_VitalityStockpile bUsesPlayerLevelRequirement False</code>
+            <code profiles="default">set GD_Iris_SeraphItems.Might.Iris_Seraph_Artifact_Might bUsesPlayerLevelRequirement False</code>
+            <code profiles="default">set GD_Orchid_Artifacts.A_Item_Unique.Artifact_Blade bUsesPlayerLevelRequirement False</code>
+            <code profiles="default">set GD_Orchid_Artifacts.A_Item_Unique.Artifact_SeraphBloodRelic bUsesPlayerLevelRequirement False</code>
+            <code profiles="default">set GD_Sage_Artifacts.A_Item.Artifact_SeraphBreath bUsesPlayerLevelRequirement False</code>
+        </category>
+
+        <category name="Class Mods (Patterns)">
+            <comment>Covers class mod patterns for all 6 characters + DLC.</comment>
+            <comment>Assassin (Zer0)</comment>
+            <code profiles="default">set GD_ClassMods.A_Item_Assassin.ClassMod_Assassin_Bane bUsesPlayerLevelRequirement False</code>
+            <code profiles="default">set GD_ClassMods.A_Item_Assassin.ClassMod_Assassin_C0at bUsesPlayerLevelRequirement False</code>
+            <code profiles="default">set GD_ClassMods.A_Item_Assassin.ClassMod_Assassin_C0re bUsesPlayerLevelRequirement False</code>
+            <code profiles="default">set GD_ClassMods.A_Item_Assassin.ClassMod_Assassin_C0rb0 bUsesPlayerLevelRequirement False</code>
+            <code profiles="default">set GD_ClassMods.A_Item_Assassin.ClassMod_Assassin_H0nk bUsesPlayerLevelRequirement False</code>
+            <code profiles="default">set GD_ClassMods.A_Item_Assassin.ClassMod_Assassin_Law bUsesPlayerLevelRequirement False</code>
+            <code profiles="default">set GD_ClassMods.A_Item_Assassin.ClassMod_Assassin_N0tC0rrupt bUsesPlayerLevelRequirement False</code>
+            <code profiles="default">set GD_ClassMods.A_Item_Assassin.ClassMod_Assassin_Ninja bUsesPlayerLevelRequirement False</code>
+            <code profiles="default">set GD_ClassMods.A_Item_Assassin.ClassMod_Assassin_Professional bUsesPlayerLevelRequirement False</code>
+            <code profiles="default">set GD_ClassMods.A_Item_Assassin.ClassMod_Assassin_Slayer bUsesPlayerLevelRequirement False</code>
+            <code profiles="default">set GD_ClassMods.A_Item_Assassin.ClassMod_Assassin_Spy bUsesPlayerLevelRequirement False</code>
+            <code profiles="default">set GD_ClassMods.A_Item_Assassin.ClassMod_Assassin_Stalker bUsesPlayerLevelRequirement False</code>
+            <comment>Commando (Axton)</comment>
+            <code profiles="default">set GD_ClassMods.A_Item_Commando.ClassMod_Commando_Bastion bUsesPlayerLevelRequirement False</code>
+            <code profiles="default">set GD_ClassMods.A_Item_Commando.ClassMod_Commando_Defender bUsesPlayerLevelRequirement False</code>
+            <code profiles="default">set GD_ClassMods.A_Item_Commando.ClassMod_Commando_Grenadier bUsesPlayerLevelRequirement False</code>
+            <code profiles="default">set GD_ClassMods.A_Item_Commando.ClassMod_Commando_Gunman bUsesPlayerLevelRequirement False</code>
+            <code profiles="default">set GD_ClassMods.A_Item_Commando.ClassMod_Commando_LeadHunter bUsesPlayerLevelRequirement False</code>
+            <code profiles="default">set GD_ClassMods.A_Item_Commando.ClassMod_Commando_Marine bUsesPlayerLevelRequirement False</code>
+            <code profiles="default">set GD_ClassMods.A_Item_Commando.ClassMod_Commando_Mauler bUsesPlayerLevelRequirement False</code>
+            <code profiles="default">set GD_ClassMods.A_Item_Commando.ClassMod_Commando_Patrol bUsesPlayerLevelRequirement False</code>
+            <code profiles="default">set GD_ClassMods.A_Item_Commando.ClassMod_Commando_Ranger bUsesPlayerLevelRequirement False</code>
+            <code profiles="default">set GD_ClassMods.A_Item_Commando.ClassMod_Commando_Rifleman bUsesPlayerLevelRequirement False</code>
+            <code profiles="default">set GD_ClassMods.A_Item_Commando.ClassMod_Commando_Sentinel bUsesPlayerLevelRequirement False</code>
+            <code profiles="default">set GD_ClassMods.A_Item_Commando.ClassMod_Commando_Tactician bUsesPlayerLevelRequirement False</code>
+            <comment>Siren (Maya)</comment>
+            <code profiles="default">set GD_ClassMods.A_Item_Siren.ClassMod_Siren_Binder bUsesPlayerLevelRequirement False</code>
+            <code profiles="default">set GD_ClassMods.A_Item_Siren.ClassMod_Siren_Cat bUsesPlayerLevelRequirement False</code>
+            <code profiles="default">set GD_ClassMods.A_Item_Siren.ClassMod_Siren_Defender bUsesPlayerLevelRequirement False</code>
+            <code profiles="default">set GD_ClassMods.A_Item_Siren.ClassMod_Siren_Fox bUsesPlayerLevelRequirement False</code>
+            <code profiles="default">set GD_ClassMods.A_Item_Siren.ClassMod_Siren_Healer bUsesPlayerLevelRequirement False</code>
+            <code profiles="default">set GD_ClassMods.A_Item_Siren.ClassMod_Siren_LegendaryBinder bUsesPlayerLevelRequirement False</code>
+            <code profiles="default">set GD_ClassMods.A_Item_Siren.ClassMod_Siren_LegendaryCat bUsesPlayerLevelRequirement False</code>
+            <code profiles="default">set GD_ClassMods.A_Item_Siren.ClassMod_Siren_LegendaryNurse bUsesPlayerLevelRequirement False</code>
+            <code profiles="default">set GD_ClassMods.A_Item_Siren.ClassMod_Siren_Matriarch bUsesPlayerLevelRequirement False</code>
+            <code profiles="default">set GD_ClassMods.A_Item_Siren.ClassMod_Siren_Nurse bUsesPlayerLevelRequirement False</code>
+            <code profiles="default">set GD_ClassMods.A_Item_Siren.ClassMod_Siren_Tempest bUsesPlayerLevelRequirement False</code>
+            <code profiles="default">set GD_ClassMods.A_Item_Siren.ClassMod_Siren_Witch bUsesPlayerLevelRequirement False</code>
+            <comment>Gunzerker (Salvador)</comment>
+            <code profiles="default">set GD_ClassMods.A_Item_Gunzerker.ClassMod_Gunzerker_Beast bUsesPlayerLevelRequirement False</code>
+            <code profiles="default">set GD_ClassMods.A_Item_Gunzerker.ClassMod_Gunzerker_Devastator bUsesPlayerLevelRequirement False</code>
+            <code profiles="default">set GD_ClassMods.A_Item_Gunzerker.ClassMod_Gunzerker_Dominator bUsesPlayerLevelRequirement False</code>
+            <code profiles="default">set GD_ClassMods.A_Item_Gunzerker.ClassMod_Gunzerker_Hoarder bUsesPlayerLevelRequirement False</code>
+            <code profiles="default">set GD_ClassMods.A_Item_Gunzerker.ClassMod_Gunzerker_LegendaryHoarder bUsesPlayerLevelRequirement False</code>
+            <code profiles="default">set GD_ClassMods.A_Item_Gunzerker.ClassMod_Gunzerker_Monkey bUsesPlayerLevelRequirement False</code>
+            <code profiles="default">set GD_ClassMods.A_Item_Gunzerker.ClassMod_Gunzerker_Ranger bUsesPlayerLevelRequirement False</code>
+            <code profiles="default">set GD_ClassMods.A_Item_Gunzerker.ClassMod_Gunzerker_Sheriff bUsesPlayerLevelRequirement False</code>
+            <code profiles="default">set GD_ClassMods.A_Item_Gunzerker.ClassMod_Gunzerker_Tank bUsesPlayerLevelRequirement False</code>
+            <code profiles="default">set GD_ClassMods.A_Item_Gunzerker.ClassMod_Gunzerker_Titan bUsesPlayerLevelRequirement False</code>
+            <comment>Mechromancer (Gaige)</comment>
+            <code profiles="default">set GD_ClassMods.A_Item_Mechromancer.ClassMod_Mechromancer_Anarchist bUsesPlayerLevelRequirement False</code>
+            <code profiles="default">set GD_ClassMods.A_Item_Mechromancer.ClassMod_Mechromancer_Dominator bUsesPlayerLevelRequirement False</code>
+            <code profiles="default">set GD_ClassMods.A_Item_Mechromancer.ClassMod_Mechromancer_Necromancer bUsesPlayerLevelRequirement False</code>
+            <code profiles="default">set GD_ClassMods.A_Item_Mechromancer.ClassMod_Mechromancer_Punk bUsesPlayerLevelRequirement False</code>
+            <code profiles="default">set GD_ClassMods.A_Item_Mechromancer.ClassMod_Mechromancer_RoboNinja bUsesPlayerLevelRequirement False</code>
+            <code profiles="default">set GD_ClassMods.A_Item_Mechromancer.ClassMod_Mechromancer_Slayer bUsesPlayerLevelRequirement False</code>
+            <code profiles="default">set GD_ClassMods.A_Item_Mechromancer.ClassMod_Mechromancer_Storm bUsesPlayerLevelRequirement False</code>
+            <code profiles="default">set GD_ClassMods.A_Item_Mechromancer.ClassMod_Mechromancer_Tech bUsesPlayerLevelRequirement False</code>
+            <code profiles="default">set GD_ClassMods.A_Item_Mechromancer.ClassMod_Mechromancer_Zapper bUsesPlayerLevelRequirement False</code>
+            <comment>Psycho (Krieg)</comment>
+            <code profiles="default">set GD_ClassMods.A_Item_Psycho.ClassMod_Psycho_Blister bUsesPlayerLevelRequirement False</code>
+            <code profiles="default">set GD_ClassMods.A_Item_Psycho.ClassMod_Psycho_Cracker bUsesPlayerLevelRequirement False</code>
+            <code profiles="default">set GD_ClassMods.A_Item_Psycho.ClassMod_Psycho_LegendaryPsycho bUsesPlayerLevelRequirement False</code>
+            <code profiles="default">set GD_ClassMods.A_Item_Psycho.ClassMod_Psycho_LegendarySickle bUsesPlayerLevelRequirement False</code>
+            <code profiles="default">set GD_ClassMods.A_Item_Psycho.ClassMod_Psycho_LegendaryTorch bUsesPlayerLevelRequirement False</code>
+            <code profiles="default">set GD_ClassMods.A_Item_Psycho.ClassMod_Psycho_Meat bUsesPlayerLevelRequirement False</code>
+            <code profiles="default">set GD_ClassMods.A_Item_Psycho.ClassMod_Psycho_Rage bUsesPlayerLevelRequirement False</code>
+            <code profiles="default">set GD_ClassMods.A_Item_Psycho.ClassMod_Psycho_Sickle bUsesPlayerLevelRequirement False</code>
+            <code profiles="default">set GD_ClassMods.A_Item_Psycho.ClassMod_Psycho_Slayer bUsesPlayerLevelRequirement False</code>
+            <code profiles="default">set GD_ClassMods.A_Item_Psycho.ClassMod_Psycho_Torch bUsesPlayerLevelRequirement False</code>
+            <code profiles="default">set GD_ClassMods.A_Item_Psycho.ClassMod_Psycho_Wound bUsesPlayerLevelRequirement False</code>
+        </category>
+
+        <category name="Shields">
+            <comment>Base game shields (partial list; expand as needed).</comment>
+            <code profiles="default">set GD_Shields.A_Item.Shield_Absorption bUsesPlayerLevelRequirement False</code>
+            <code profiles="default">set GD_Shields.A_Item.Shield_Amplify bUsesPlayerLevelRequirement False</code>
+            <code profiles="default">set GD_Shields.A_Item.Shield_Booster bUsesPlayerLevelRequirement False</code>
+            <code profiles="default">set GD_Shields.A_Item.Shield_Impact bUsesPlayerLevelRequirement False</code>
+            <code profiles="default">set GD_Shields.A_Item.Shield_Juggernaut bUsesPlayerLevelRequirement False</code>
+            <code profiles="default">set GD_Shields.A_Item.Shield_Nova bUsesPlayerLevelRequirement False</code>
+            <code profiles="default">set GD_Shields.A_Item.Shield_Roid bUsesPlayerLevelRequirement False</code>
+            <code profiles="default">set GD_Shields.A_Item.Shield_Spike bUsesPlayerLevelRequirement False</code>
+            <code profiles="default">set GD_Shields.A_Item.Shield_Standard bUsesPlayerLevelRequirement False</code>
+            <code profiles="default">set GD_Shields.A_Item.Shield_Turtle bUsesPlayerLevelRequirement False</code>
+            <code profiles="default">set GD_Shields.A_Item.Shield_Wormhole bUsesPlayerLevelRequirement False</code>
+        </category>
+
+        <category name="Grenade Mods">
+            <comment>Base game grenade mods (partial list; expand as needed).</comment>
+            <code profiles="default">set GD_GrenadeMods.A_Item.GM_AreaEffect bUsesPlayerLevelRequirement False</code>
+            <code profiles="default">set GD_GrenadeMods.A_Item.GM_BouncingBetty bUsesPlayerLevelRequirement False</code>
+            <code profiles="default">set GD_GrenadeMods.A_Item.GM_Mirv bUsesPlayerLevelRequirement False</code>
+            <code profiles="default">set GD_GrenadeMods.A_Item.GM_Singularity bUsesPlayerLevelRequirement False</code>
+            <code profiles="default">set GD_GrenadeMods.A_Item.GM_Standard bUsesPlayerLevelRequirement False</code>
+            <code profiles="default">set GD_GrenadeMods.A_Item.GM_Sticky bUsesPlayerLevelRequirement False</code>
+            <code profiles="default">set GD_GrenadeMods.A_Item.GM_Tesla bUsesPlayerLevelRequirement False</code>
+            <code profiles="default">set GD_GrenadeMods.A_Item.GM_Transfusion bUsesPlayerLevelRequirement False</code>
+        </category>
+
+        <category name="Krieg Buzzaxe">
+            <comment>Krieg's melee weapon needs its own flag.</comment>
+            <code profiles="default">set GD_Lilac_SkillsBase.Buzzaxe.WeaponType_Buzzaxe bUsesPlayerLevelRequirement False</code>
+        </category>
+
+        <category name="Weapons (General Manufacturers)">
+            <comment>Weapons are the hardest to enumerate because every manufacturer+type combination</comment>
+            <comment>is a separate object definition. The FULL mod lists 1000+ weapon lines.</comment>
+            <comment></comment>
+            <comment>For weapons, the MOST RELIABLE approach is the Python SDK mod (see mods/ dir),</comment>
+            <comment>which hooks the equip check at runtime and covers ALL weapons automatically.</comment>
+            <comment></comment>
+            <comment>Or download the complete NoLevelRequirement mod from Nexus Mods #94.</comment>
+            <comment></comment>
+            <comment>Below are a few common unique weapons as examples:</comment>
+            <code profiles="default">set GD_Weap_Pistol.A_Weapons_Unique.Pistol_Bandit_3_Dahlminator bUsesPlayerLevelRequirement False</code>
+            <code profiles="default">set GD_Weap_Pistol.A_Weapons_Unique.Pistol_Bandit_3_Gub bUsesPlayerLevelRequirement False</code>
+            <code profiles="default">set GD_Weap_Pistol.A_Weapons_Unique.Pistol_Dahl_3_Hornet bUsesPlayerLevelRequirement False</code>
+            <code profiles="default">set GD_Weap_Pistol.A_Weapons_Unique.Pistol_Jakobs_3_Maggie bUsesPlayerLevelRequirement False</code>
+            <code profiles="default">set GD_Weap_Pistol.A_Weapons_Unique.Pistol_Maliwan_3_ThunderballFists bUsesPlayerLevelRequirement False</code>
+            <code profiles="default">set GD_Weap_Pistol.A_Weapons_Unique.Pistol_Tediore_3_Gunerang bUsesPlayerLevelRequirement False</code>
+            <code profiles="default">set GD_Weap_Pistol.A_Weapons_Unique.Pistol_Vladof_3_Infinity bUsesPlayerLevelRequirement False</code>
+            <code profiles="default">set GD_Weap_AssaultRifle.A_Weapons_Unique.AR_Jakobs_3_Hammerlock bUsesPlayerLevelRequirement False</code>
+            <code profiles="default">set GD_Weap_AssaultRifle.A_Weapons_Unique.AR_Vladof_3_Sheriff bUsesPlayerLevelRequirement False</code>
+            <code profiles="default">set GD_Weap_Shotgun.A_Weapons_Unique.SG_Jakobs_3_Striker bUsesPlayerLevelRequirement False</code>
+            <code profiles="default">set GD_Weap_Shotgun.A_Weapons_Unique.SG_Tediore_3_Blockhead bUsesPlayerLevelRequirement False</code>
+            <code profiles="default">set GD_Weap_SMG.A_Weapons_Unique.SMG_Hyperion_3_Bitch bUsesPlayerLevelRequirement False</code>
+            <code profiles="default">set GD_Weap_SMG.A_Weapons_Unique.SMG_Maliwan_3_HellFire bUsesPlayerLevelRequirement False</code>
+            <code profiles="default">set GD_Weap_SniperRifles.A_Weapons_Unique.Sniper_Jakobs_3_Skullmasher bUsesPlayerLevelRequirement False</code>
+            <code profiles="default">set GD_Weap_SniperRifles.A_Weapons_Unique.Sniper_Maliwan_3_Pitchfork bUsesPlayerLevelRequirement False</code>
+            <code profiles="default">set GD_Weap_Launchers.A_Weapons_Unique.RLauncher_Vladof_3_Mongol bUsesPlayerLevelRequirement False</code>
+        </category>
+    </category>
+</body>
+</BLCMM>
